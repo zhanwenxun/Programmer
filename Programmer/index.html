@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programmer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Import Buefy.css -->
+    <link rel="stylesheet" href="https://unpkg.com/buefy/dist/buefy.min.css">
+</head>
+
+<body>
+    <div id="app" class="container is-fluid is-mobile">
+        <!-- Navigation Bar -->
+        <b-navbar class="is-fixed-top is-active" centered="true" shadow="true">
+            <template #brand>
+                <b-navbar-item tag="router-link" :to="{ path: '/' }">
+                    <img src="images/logo.png" alt="Lightweight UI components for Vue.js based on Bulma"
+                        style="margin: 10px 0px 5px 15px;" width="160px" height="100px">
+                </b-navbar-item>
+            </template>
+            <template #start class="navbar">
+                <b-navbar-item href="#part1">
+                    Hard
+                </b-navbar-item>
+                <b-navbar-item href="#part2">
+                    Soft
+                </b-navbar-item>
+                <b-navbar-item href="#part3">
+                    Where
+                </b-navbar-item>
+                <b-navbar-item href="#part4">
+                    Worry
+                </b-navbar-item>
+            </template>
+            <template #end>
+                <b-navbar-item tag="div">
+                    <b-button label="About Us" type="is-primary" size="is-medium" style="margin-right: 30px;"
+                        @click="About_Us" />
+                </b-navbar-item>
+            </template>
+        </b-navbar>
+
+        <!-- Introduction Picture -->
+        <div class="section box">
+            <figure class="image">
+                <img src="images/intro-word.png">
+            </figure>
+        </div>
+
+        <section class="hero is-link" style="margin-bottom: 20px;">
+            <div class="hero-body"
+                style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                <p class="title" style="font-size: 50px;">
+                    How good is a programmer as a spouse?
+                </p>
+                <br>
+                <p class="subtitle" style="font-size: 30px;">
+                    <b>THREE</b> "Highly" reasons to choose a <b>PROGRAMMER</b>!
+                </p>
+            </div>
+        </section>
+
+        <div class="tile is-ancestor">
+            <div class="tile is-parent is-4">
+                <div class="tile is-child box ">
+                    <div class="title" style="text-align: center; font-family: Times New Roman;">
+                        Highly Educated
+                    </div>
+                    <figure class="image">
+                        <img src="images/Intro-education 2.jpeg">
+                    </figure>
+                </div>
+            </div>
+            <div class="tile is-parent is-4">
+                <div class="tile is-child box ">
+                    <div class="title" style="text-align: center; font-family: Times New Roman;">
+                        Highly Income
+                    </div>
+                    <figure class="image">
+                        <img src="images/Intro-income 2.jpeg">
+                    </figure>
+                </div>
+            </div>
+            <div class="tile is-parent  is-4">
+                <div class="tile is-child box">
+                    <div class="title" style="text-align: center; font-family: Times New Roman;">
+                        Highly Loyal
+                    </div>
+                    <figure class="image">
+                        <img src="images/Intro-loyal 2.jpeg">
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <!-- Part1: Hard Condition -->
+        <section id="part1" class="section">
+            <div class="tile is-parent">
+                <div class="tile is-child box has-background-info" style="text-align: center;">
+                    <h1 class="title is-2 has-text-white is-family-code">Hard Condition</h2>
+                </div>
+            </div>
+            <div class="tile is-ancestor is-vertical box">
+                <div class="tile is-parent">
+                    <figure class="image">
+                        <img src="images/Part-1-Intro-word.png">
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Education</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                Among the Chinese programmers, Most of them(about65.7%) have a bachelor degree, and 77%
+                                of programmers are highly educated.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/education.jpeg">
+                            </figure>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Education -->
+                        <div id="chart2" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Income & Car,House -->
+            <div class="tile is-ancestor is-vertical">
+                <div class="tile is-parent">
+                    <div class="tile is-child box has-background-primary">
+                        <h1 class="title is-2 has-text-white is-family-code">Income</h2>
+                            <h2 class="subtitle is-5 has-text-white">
+                                Nearly 60% of programmers have a monthly salary of between 10,000 and 20,000, and a
+                                small number can earn more than 20,000 a month.
+                            </h2>
+                    </div>
+                </div>
+
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <!-- Income -->
+                            <div id="chart3" class="chart">
+                            </div>
+                        </div>
+
+                        <div class="tile is-parent">
+                            <div class="tile is-child box">
+                                <figure class="image">
+                                    <img src="images/income.jpeg">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tile is-vertical">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box">
+                            <section class="hero is-large"
+                                style="background: url(images/carAndHouse.jpeg) center / cover;">
+                                <div class="hero-body">
+                                    <h1 class="title is-2 has-text-white">Car & House</h1>
+                                    <h2 class="subtitle is-4 has-text-white" style="width: 40%;">
+                                        Nearly 60% of programmers have a car, more than 70% have a house, and the
+                                        proportion
+                                        of
+                                        a house with a car is higher than the level of the entire network.
+                                    </h2>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class="tile is-child box has-background-info-light">
+                                <!-- Car -->
+                                <div id="chart41" class="chart"></div>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="tile is-child box has-background-warning-light">
+                                <!-- House -->
+                                <div id="chart42" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Part2: Soft Condition -->
+        <section id="part2" class="section">
+            <div class="tile is-parent">
+                <div class="tile is-child box has-background-success" style="text-align: center;">
+                    <h1 class="title is-2 has-text-white is-family-code">Soft Condition</h2>
+                </div>
+            </div>
+            <div class="tile is-ancestor is-vertical box">
+                <div class="tile is-parent">
+                    <figure class="image">
+                        <img src="images/Part-2-Intro.jpeg">
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Stable & Replationship View -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Character</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                The most recognized quality by programmers is stress resistance, perhaps because they
+                                often need to urgently fix bugs.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/Character.jpeg">
+                            </figure>
+                            
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Stable -->
+                        <div id="chart6" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Pursue</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                Programmers are not stupid in love, more than 50% of them will actively pursue their
+                                spouse.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/RelationshipView.jpeg">
+                            </figure>
+                          
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Relationship View -->
+                        <div id="chart8" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Sex Ratio & App User-->
+            <div class="tile is-ancestor is-vertical">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <figure class="image">
+                            <img src="images/Reject.jpeg">
+                        </figure>
+                        <div><br></div>
+                        <h1 class="title is-2 has-text-warning-dark">Temptation in life</h2>
+                            <br>
+                            <h2 class="subtitle is-5 has-text-primary-dark">
+                                Their number of female colleagues is very small, and the ratio of men to women is
+                                astonishing 1:9. At the same time, due to their small social circle, they have to use
+                                blind date software to get to know girls.
+                            </h2>
+                    </div>
+                </div>
+                <div class="tile">
+                    <div class="tile is-parent">
+                        <div class="tile is-child box has-background-danger-light">
+                            <!-- Sex Ratio -->
+                            <h2 class="subtitle is-5">
+                                Ratio of men to women in the workplace
+                            </h2>
+                            <div id="chart5" class="chart"></div>
+                        </div>
+                    </div>
+                    <div class="tile is-parent">
+
+                        <div class="tile is-child box has-background-success-light">
+                            <h2 class="subtitle is-5">
+                                Proportion of blind date software users
+                            </h2>
+                            <!-- Matchmaking App Users -->
+                            <div id="chart17" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <b-collapse :open="false" aria-id="contentIdForA11y1">
+            <template #trigger>
+                <b-button label="Tips For Girls" type="is-primary" aria-controls="contentIdForA11y1"
+                    style="display: block; margin: 0 auto;" />
+            </template>
+            <div class="notification">
+                <div class="content">
+                    <!-- Love Concept -->
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class="tile is-child box">
+                                <h1 class="title is-2">Choose a Spouse</h2>
+                                    <h2 class="subtitle is-5 has-text-grey-light">
+                                        Types of girls that programmers like.
+                                    </h2>
+                                    <figure class="image">
+                                        <img src="images/ChooseASpouse.jpeg">
+                                    </figure>
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="tile is-child box">
+                                <!-- Choose a Spouse -->
+                                <div id="chart7" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tile is-ancestor">
+                        <div class="tile is-parent">
+                            <div class="tile is-child box">
+                                <h1 class="title is-2">Consumption Type</h2>
+                                    <h2 class="subtitle is-5 has-text-grey-light">
+                                        Compared with high income, their daily expenses are relatively frugal. Top 3
+                                        consumer
+                                        products are online entertainment, learning products, and electronic
+                                        products.
+                                    </h2>
+
+                                    <figure class="image">
+                                        <img src="images/ConsumptionType.jpeg">
+                                    </figure>
+                                   
+                            </div>
+                        </div>
+                        <div class="tile is-parent">
+                            <div class="tile is-child box">
+                                <!-- Consumption Type -->
+                                <div id="chart10" class="chart"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </b-collapse>
+
+        <!-- Part3: Where? -->
+        <section id="part3" class="section">
+            <div class="tile is-parent">
+                <div class="tile is-child box has-background-link" style="text-align: center;">
+                    <h1 class="title is-2 has-text-white is-family-code">Where ?</h2>
+                </div>
+            </div>
+            <div class="tile is-ancestor is-vertical box">
+                <div class="tile is-parent">
+                    <figure class="image">
+                        <img src="images/Part-3-Intro.jpeg">
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Quantity</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                The total number exceeded 2.5 million, including more than 2.3 million men.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/quantity.jpeg">
+                            </figure>
+                           
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <div id="chart13" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Age -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Age</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                The age of most programmers is very suitable for marriage, they are concentrated in the
+                                25-34 years old.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/Age.jpeg">
+                            </figure>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Age -->
+                        <div id="chart1" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Location City -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">City Grade Distribution</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                Chinese programmers prefer big cities, especially first-tier and new first-tier cities.
+                            </h2>
+                            <figure class="image">
+                                <img src="images/BigCity.jpeg">
+                            </figure>
+                          
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- City Grade Distribution -->
+                        <div id="chart14" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- Unmarried Rate & Matchmaking App Users -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Unmarried Rate</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                More than half of the programmers are unmarried.
+                            </h2>
+                            <figure class="image">
+                                <img src="images/Unmarried.jpeg">
+                            </figure>
+
+                            
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Unmarried Rate -->
+                        <div id="chart16" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Part4: 996? -->
+        <section id="part4" class="section">
+            <div class="tile is-parent">
+                <div class="tile is-child box has-background-warning" style="text-align: center;">
+                    <h1 class="title is-2 has-text-white is-family-code">996 ?</h2>
+                </div>
+            </div>
+            <div class="tile is-ancestor is-vertical box">
+                <div class="tile is-parent">
+                    <figure class="image">
+                        <img src="images/Part-4-Intro.jpeg">
+                    </figure>
+                </div>
+            </div>
+
+            <!-- Is overtime serious -->
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Overtime</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                Surprisingly, programmers working overtime are not as serious as outsiders imagine. Most
+                                programmers don’t have to work overtime on weekends.
+                            </h2>
+                            <figure class="image">
+                                <img src="images/workOverTime.jpeg">
+                            </figure>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Overtime -->
+                        <div id="chart18" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tile is-ancestor">
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <h1 class="title is-2">Worktime</h2>
+                            <h2 class="subtitle is-5 has-text-grey-light">
+                                Most Chinese programmers work in less than 50 hours a week.
+                            </h2>
+
+                            <figure class="image">
+                                <img src="images/workTime.jpeg">
+                            </figure>
+                            
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <!-- Worktime -->
+                        <div id="chart19" class="chart"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-info" style="margin-bottom: 20px;">
+            <div class="hero-body"
+                style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+                <p class="title" style="font-size: 30px;">
+                    Programmers have high education and income, 
+                </p>
+                <p class="title" style="font-size: 30px;">
+                    and also big part of them have car and house. 
+                </p>
+                <p class="title" style="font-size: 30px;">
+                    They are easy to find and also young. 
+                </p>
+                <p class="title" style="font-size: 30px;">
+                    They can control their temptations, and not frequently overtime, 
+                </p>
+                <p class="title" style="font-size: 30px;">  
+                    so they have enough time to accompany family.
+                </p>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Programmer</strong> by <a href="#">ZHAN Wenxun / YAN Fuzhang / QIANG Boyang</a>.
+                </p>
+                <p>
+                    The website data is from <a href="https://www.mob.com/mobdata/report/118">this site</a>.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Import chart.js and datalabels plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+
+    <!-- Import Vue and Buefy -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/buefy/dist/buefy.min.js"></script>
+    <script src="https://unpkg.com/buefy/dist/components/table"></script>
+    <script src="https://unpkg.com/buefy/dist/components/input"></script>
+
+    <!-- Import amCharts.js -->
+    <script src="//cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="//cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+    <!-- Import jQuery.js in js folder -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- You should import jquery.js firstly, so that index.js can know $ -->
+    <!-- Import index.js in js folder-->
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <script>
+        var information = '<div style="text-align:center"><b>ZHAN Wenxun<br/> YAN Fuzhang<br/> QIANG Boyang</b></div>'
+
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+
+                }
+            },
+            methods: {
+                About_Us() {
+                    this.$buefy.dialog.alert({
+                        title: 'About Us',
+                        message: information,
+                        confirmText: 'Back'
+                    })
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
